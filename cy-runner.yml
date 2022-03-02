@@ -42,7 +42,7 @@ testConfig:
     branch: qe/cypress
   # Use Twilio as OPT provider? Don't forget the credentials on secrets.
   twilio:
-    enabled: true
+    enabled: false
   vtex:
     account: productusqa
     id: 2001459804
