@@ -11,7 +11,12 @@ on:
       - chore/*
   pull_request:
     types: [opened, synchronize, reopened]
-    
+
+# To avoid random out of order error
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
 jobs:
   sonarcloud:
     name: SonarCloud
